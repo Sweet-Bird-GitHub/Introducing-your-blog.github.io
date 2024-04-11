@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="ko">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>동아리 홈페이지</title>
+    <link rel="stylesheet"  href="background.css">
+    <script src="background.js"></script>
+</head>
+<body>
+
+    <section id="bg" class="gradient">
+   
+        <h1 id="timer"></h1>
+      </section>
+
+
+
+
+
+
+ <script>
+ 
+        var timer = 5;
+
+        
+        var countdown = setInterval(function() {
+            timer--;
+            document.getElementById("timer").textContent = timer+ "초 후에 페이지 변경";
+
+         
+            if (timer <= 0) {
+                clearInterval(countdown);
+                window.location.href = "--";
+            }
+        }, 1000);
+    </script> 
+</body>
+</html>
